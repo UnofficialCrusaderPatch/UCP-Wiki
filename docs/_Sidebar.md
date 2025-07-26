@@ -1,0 +1,23 @@
+### Index
+- [Home](Home)
+- **Getting started**
+  - [Installation](Installation)
+  - [Command‑line flags](Command-Line)
+- **Using UCP**
+  - [GUI tour](Using-UCP)
+- **Modding**
+  - [Extensions](Extensions)
+  - [Configuration](Configuration)
+- **AI & Balance**
+  - [AI Character](AI-Character)
+  - [AI Personality](AI-Personality)
+  - [In‑depth personality](AI-Personality-Depth)
+  - [AIC editing tutorial](AIC-Editing-Tutorial)
+  - [Targeting type](Targeting-Type)
+  - [Unit power table](Unit-Power-Table)
+- **Developer**
+  - [Framework](Framework)
+  - [Contributor tutorial](Contributor-Tutorial)
+- **Project**
+  - [Roadmap ideas](Roadmap-Ideas)
+[text](about:blank#blocked)
