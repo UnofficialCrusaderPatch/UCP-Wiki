@@ -1,23 +1,50 @@
-# Welcome to the UCP Wiki
+# Willkommen im UCP-Wiki
 
-This is the central documentation hub for the [**Unofficial Crusader Patch (UCP)**](https://github.com/UnofficialCrusaderPatch/UnofficialCrusaderPatch). Here you'll find everything you need to get started, customize your game, create your own mods, and dive deep into the mechanics of Stronghold Crusader.
+Dies ist der zentrale Dokumentations-Hub für den [**Unofficial Crusader Patch (UCP)**](https://github.com/UnofficialCrusaderPatch/UnofficialCrusaderPatch). Hier findest du alles, was du für den Einstieg, die Anpassung deines Spiels, die Erstellung eigener Mods und das tiefere Verständnis der Spielmechaniken von Stronghold Crusader benötigst.
 
-## What is the UCP?
+## Was ist der UCP?
 
-The Unofficial Crusader Patch is a modification framework for Stronghold Crusader. It serves multiple purposes:
-* **Fixes** long-standing bugs and improves game stability.
-* **Extends** the game with new features and quality-of-life improvements.
-* **Empowers** the community by providing a powerful, modular framework for creating and sharing your own content, from custom AIs to complete rebalance mods.
+Der Unofficial Crusader Patch ist ein Modding-Framework für Stronghold Crusader, das mehrere Zwecke erfüllt:
 
-## How to use this Wiki
-
-This wiki is organized into several key sections, accessible via the sidebar on the left:
-
-* **Player Guides:** If you're new to the UCP, start here. You'll find installation instructions and a tour of the user interface.
-* **Stronghold Crusader Wiki:** A comprehensive knowledge base about the vanilla game, including detailed stats on units, buildings, AI behavior, and core game mechanics.
-* **Modding with UCP:** For creators who want to build their own extensions. Learn how the framework is structured, how to configure modules, and how to write your own scripts.
-* **Developer Zone:** For advanced users who want to contribute directly to the UCP project itself.
+* **Fehlerbehebungen:** Behebt langjährige Bugs und verbessert die Stabilität des Spiels.
+* **Erweiterungen:** Fügt dem Spiel neue Funktionen und Quality-of-Life-Verbesserungen hinzu.
+* **Community-Plattform:** Stellt ein leistungsstarkes, modulares Framework zur Verfügung, mit dem die Community eigene Inhalte – von KIs bis hin zu kompletten Rebalance-Mods – erstellen und teilen kann.
 
 ---
 
-Ready to get started? Head over to the [**Installation**](Installation) page!
+## Wo anfangen? (Where to Start?)
+
+Dieses Wiki ist für jeden etwas. Hier sind die besten Startpunkte, je nachdem, was du suchst:
+
+### Für Spieler
+
+Du möchtest einfach nur spielen und das bestmögliche Crusader-Erlebnis haben?
+
+* **► [Empfohlene Setups](Player-Guides/Getting-Started/Recommended-Setups.md)**
+    * Der schnellste Weg zum Spielspaß. Wähle aus kuratierten Mod-Paketen für verschiedene Spielstile – von einem verbesserten Vanilla-Erlebnis bis hin zu extrem herausfordernden KIs.
+
+* **► [Installationsanleitung](Player-Guides/Getting-Started/Installation.md)**
+    * Für eine saubere und problemlose Installation des UCP.
+
+* **► [Stronghold Crusader Wiki](Stronghold-Crusader-Wiki/Units/Units-Overview.md)**
+    * Vertiefe dein Wissen über Einheiten, Gebäude und Spielmechaniken, um deine Strategien zu verbessern.
+
+### Für Modder
+
+Du möchtest deine eigenen Inhalte für Stronghold Crusader erstellen?
+
+* **► [Dein erstes Plugin erstellen](Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md)**
+    * Der essenzielle Guide, der dir zeigt, wie du mit der UCP-GUI ein eigenes Inhalts-Plugin für Karten, KIs und mehr erstellst.
+
+* **► [KI-Bearbeitungs-Tutorial](Stronghold-Crusader-Wiki/AI-Lords/AI-Editing-Tutorial.md)**
+    * Ein tiefer Einblick in die Erstellung und Anpassung von KI-Burgherren, dem Herzstück vieler Mods.
+
+### Für Entwickler
+
+Du möchtest am Kern des UCP-Frameworks mitarbeiten und neue Features programmieren?
+
+* **► [Contributor-Tutorial](Developer-Zone/Contributor-Tutorial.md)**
+    * Dein Ausgangspunkt, um zu lernen, wie man Code-ändernde Module für den UCP erstellt.
+
+* **► [Framework-Architektur](Modding-with-UCP/Creating-Extensions/Framework-Architecture.md)**
+    * Verstehe, wie der UCP intern funktioniert, um effektiv neue Features entwickeln zu können.

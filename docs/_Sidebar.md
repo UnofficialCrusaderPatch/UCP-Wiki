@@ -17,12 +17,13 @@
 - **Game Mechanics**
   - [Popularity & Tax System](Stronghold-Crusader-Wiki/Game-Mechanics/Popularity-System)
   - [Game Data Reference](Stronghold-Crusader-Wiki/Game-Mechanics/Game-Data-Reference)
+  - [Unit Power Table](Stronghold-Crusader-Wiki/Game-Mechanics/Unit-Power-Table)
 - **AI Lords**
   - [AI Lords Overview](Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview)
   - [AI Character Parameters (AIC)](Stronghold-Crusader-Wiki/AI-Lords/AI-Character-Parameters)
   - [AI Personality Explained](Stronghold-Crusader-Wiki/AI-Lords/AI-Personality-Explained)
   - [AI Targeting Types](Stronghold-Crusader-Wiki/AI-Lords/AI-Targeting-Types)
-  - [Unit Power Table](Stronghold-Crusader-Wiki/AI-Lords/Unit-Power-Table)
+  - [AI Editing Tutorial](Stronghold-Crusader-Wiki/AI-Lords/AI-Editing-Tutorial)
 - **Buildings**
   - [Buildings Overview](Stronghold-Crusader-Wiki/Buildings/Buildings-Overview)
 - **Units**
@@ -37,7 +38,6 @@
   - [Framework Architecture](Modding-with-UCP/Creating-Extensions/Framework-Architecture)
   - [Extensions Overview](Modding-with-UCP/Creating-Extensions/Extensions-Overview)
   - [Creating a Plugin](Modding-with-UCP/Creating-Extensions/Creating-a-Plugin)
-  - [AI Editing Tutorial](Stronghold-Crusader-Wiki/AI-Lords/AI-Editing-Tutorial)
   - [Configuration (`options.yml`, `config.yml`)](Modding-with-UCP/Creating-Extensions/Configuration)
 - **Advanced Modding**
   - [Reverse Engineering with Ghidra](Modding-with-UCP/Advanced-Modding/Reverse-Engineering-Ghidra)
