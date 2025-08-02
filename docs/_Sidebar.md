@@ -5,47 +5,50 @@
 
 ### **Player Guides**
 - **Getting Started**
-  - [Installation](Installation)
-  - [Command-Line Flags](Command-Line-Flags)
+  - [Installation](Player-Guides/Getting-Started/Installation)
+  - [Command-Line Flags](Player-Guides/Getting-Started/Command-Line-Flags)
+  - [Recommended Setups](Player-Guides/Getting-Started/Recommended-Setups)
 - **Using the UCP**
-  - [GUI Tour](GUI-Tour)
+  - [GUI Tour](Player-Guides/Using-the-UCP/GUI-Tour)
 
 ---
 
 ### **Stronghold Crusader Wiki**
 - **Game Mechanics**
-  - [Popularity & Tax System](Popularity-System)
-  - [Game Data Reference](Game-Data-Reference)
+  - [Popularity & Tax System](Stronghold-Crusader-Wiki/Game-Mechanics/Popularity-System)
+  - [Game Data Reference](Stronghold-Crusader-Wiki/Game-Mechanics/Game-Data-Reference)
 - **AI Lords**
-  - [AI Character Parameters (AIC)](AI-Character-Parameters)
-  - [AI Personality Explained](AI-Personality-Explained)
-  - [AIC Editing Tutorial](AIC-Editing-Tutorial)
-  - [Unit Power Table](Unit-Power-Table)
-  - [AI Targeting Types](AI-Targeting-Types)
+  - [AI Lords Overview](Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview)
+  - [AI Character Parameters (AIC)](Stronghold-Crusader-Wiki/AI-Lords/AI-Character-Parameters)
+  - [AI Personality Explained](Stronghold-Crusader-Wiki/AI-Lords/AI-Personality-Explained)
+  - [AI Targeting Types](Stronghold-Crusader-Wiki/AI-Lords/AI-Targeting-Types)
+  - [Unit Power Table](Stronghold-Crusader-Wiki/AI-Lords/Unit-Power-Table)
 - **Buildings**
-  - [Building Statistics](Building-Stats)
+  - [Buildings Overview](Stronghold-Crusader-Wiki/Buildings/Buildings-Overview)
 - **Units**
-  - [Unit Statistics](Unit-Stats)
+  - [Units Overview](Stronghold-Crusader-Wiki/Units/Units-Overview)
 - **Strategies**
-  - [Common Strategies](Strategies)
+  - [Strategies Overview](Stronghold-Crusader-Wiki/Strategies/Strategies-Overview)
 
 ---
 
 ### **Modding with UCP**
 - **Creating Extensions**
-  - [Framework Architecture](Framework-Architecture)
-  - [Extensions Overview](Extensions-Overview)
-  - [Configuration (`options.yml`, `config.yml`)](Configuration)
+  - [Framework Architecture](Modding-with-UCP/Creating-Extensions/Framework-Architecture)
+  - [Extensions Overview](Modding-with-UCP/Creating-Extensions/Extensions-Overview)
+  - [Creating a Plugin](Modding-with-UCP/Creating-Extensions/Creating-a-Plugin)
+  - [AI Editing Tutorial](Stronghold-Crusader-Wiki/AI-Lords/AI-Editing-Tutorial)
+  - [Configuration (`options.yml`, `config.yml`)](Modding-with-UCP/Creating-Extensions/Configuration)
 - **Advanced Modding**
-  - [Reverse Engineering with Ghidra](Reverse-Engineering-Ghidra)
-  - [Finding Values with Cheat Engine](Finding-Values-Cheat-Engine)
+  - [Reverse Engineering with Ghidra](Modding-with-UCP/Advanced-Modding/Reverse-Engineering-Ghidra)
+  - [Finding Values with Cheat Engine](Modding-with-UCP/Advanced-Modding/Finding-Values-Cheat-Engine)
 
 ---
 
 ### **Developer Zone**
-- [Contributor Tutorial](Contributor-Tutorial)
+- [Contributor Tutorial](Developer-Zone/Contributor-Tutorial)
 
 ---
 
 ### **Project**
-- [Roadmap & Ideas](Roadmap-Ideas)
+- [Roadmap & Ideas](Project/Roadmap-Ideas)

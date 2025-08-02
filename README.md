@@ -1,7 +1,6 @@
 # UCP‑Wiki
 
-> **Unofficial Crusader Patch — Central Documentation Hub** > Flat Markdown pages for players, modders, and developers.  
-> Easily embeddable (via `raw.githubusercontent.com`) *and* readable on GitHub.
+> **Unofficial Crusader Patch — Central Documentation Hub** > Flat Markdown pages for players, modders, and developers. Easily embeddable and readable on GitHub.
 
 ---
 
@@ -19,14 +18,14 @@
 
 | Section | Page |
 |---|---|
-| Getting Started | [`docs/Player-Guides/Getting-Started/Installation.md`](docs/Player-Guides/Getting-Started/Installation.md) |
-| Crusader Wiki | [`docs/Stronghold-Crusader-Wiki/Game-Mechanics/Popularity-System.md`](docs/Stronghold-Crusader-Wiki/Game-Mechanics/Popularity-System.md) |
-| AI Modding | [`docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Character-Parameters.md`](docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Character-Parameters.md) |
-| Creating Extensions | [`docs/Modding-with-UCP/Creating-Extensions/Extensions-Overview.md`](docs/Modding-with-UCP/Creating-Extensions/Extensions-Overview.md) |
-| Developer Guide | [`docs/Developer-Zone/Contributor-Tutorial.md`](docs/Developer-Zone/Contributor-Tutorial.md) |
+| Getting Started | [`docs/Player-Guides/Getting-Started/Recommended-Setups.md`](docs/Player-Guides/Getting-Started/Recommended-Setups.md) |
+| Crusader Wiki | [`docs/Stronghold-Crusader-Wiki/Units/Units-Overview.md`](docs/Stronghold-Crusader-Wiki/Units/Units-Overview.md) |
+| AI Lords Guide | [`docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview.md`](docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview.md) |
+| Create a Mod | [`docs/Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md`](docs/Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md) |
+| Developer Zone | [`docs/Developer-Zone/Contributor-Tutorial.md`](docs/Developer-Zone/Contributor-Tutorial.md) |
 | Project Roadmap | [`docs/Project/Roadmap-Ideas.md`](docs/Project/Roadmap-Ideas.md) |
 
-See the full sidebar in [`docs/_Sidebar.md`](docs/_Sidebar.md).
+See the full sidebar structure in `docs/_Sidebar.md`. Note that the custom website will generate this sidebar automatically from the file structure.
 
 ---
 
@@ -34,7 +33,7 @@ See the full sidebar in [`docs/_Sidebar.md`](docs/_Sidebar.md).
 
 To embed a page, you need its raw GitHub URL. For example, to fetch and render the `Installation.md` page:
 
-```js
++++js
 // Example: fetch & render the Installation page
 import { marked } from 'marked';
 
@@ -45,4 +44,4 @@ fetch(url)
   .then(md => {
     document.getElementById('wiki-root').innerHTML = marked.parse(md);
   });
-```
++++
