@@ -18,7 +18,7 @@
 
 | Section | Page |
 |---|---|
-| Getting Started | [`docs/Player-Guides/Getting-Started/Recommended-Setups.md`](docs/Player-Guides/Getting-Started/Recommended-Setups.md) |
+| Getting Started | [`docs/User-Guides/Getting-Started/Recommended-Setups.md`](docs/User-Guides/Getting-Started/Recommended-Setups.md) |
 | Crusader Wiki | [`docs/Stronghold-Crusader-Wiki/Units/Units-Overview.md`](docs/Stronghold-Crusader-Wiki/Units/Units-Overview.md) |
 | AI Lords Guide | [`docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview.md`](docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview.md) |
 | Create a Mod | [`docs/Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md`](docs/Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md) |
@@ -37,7 +37,7 @@ To embed a page, you need its raw GitHub URL. For example, to fetch and render t
 // Example: fetch & render the Installation page
 import { marked } from 'marked';
 
-const url = 'https://raw.githubusercontent.com/UnofficialCrusaderPatch/UCP-Wiki/main/docs/Player-Guides/Getting-Started/Installation.md';
+const url = 'https://raw.githubusercontent.com/UnofficialCrusaderPatch/UCP-Wiki/main/docs/User-Guides/Getting-Started/Installation.md';
 
 fetch(url)
   .then(r => r.text())

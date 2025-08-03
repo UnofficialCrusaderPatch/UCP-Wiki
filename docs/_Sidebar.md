@@ -5,11 +5,11 @@
 
 ### **Player Guides**
 - **Getting Started**
-  - [Installation](Player-Guides/Getting-Started/Installation)
-  - [Command-Line Flags](Player-Guides/Getting-Started/Command-Line-Flags)
-  - [Recommended Setups](Player-Guides/Getting-Started/Recommended-Setups)
+  - [Installation](User-Guides/Getting-Started/Installation)
+  - [Command-Line Flags](User-Guides/Getting-Started/Command-Line-Flags)
+  - [Recommended Setups](User-Guides/Getting-Started/Recommended-Setups)
 - **Using the UCP**
-  - [GUI Tour](Player-Guides/Using-the-UCP/GUI-Tour)
+  - [GUI Tour](User-Guides/Using-the-UCP/GUI-Tour)
 
 ---
 

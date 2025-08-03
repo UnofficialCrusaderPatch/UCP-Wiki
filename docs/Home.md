@@ -19,10 +19,10 @@ This wiki has something for everyone. Here are the best starting points dependin
 
 Want to jump in and get the best possible Crusader experience?
 
-* **► [Recommended Setups](Player-Guides/Getting-Started/Recommended-Setups.md)**
+* **► [Recommended Setups](User-Guides/Getting-Started/Recommended-Setups.md)**
     * This is the fastest way to get started. Choose from curated mod packages for different playstyles—from an improved vanilla experience to extremely challenging AI.
 
-* **► [Installation Guide](Player-Guides/Getting-Started/Installation.md)**
+* **► [Installation Guide](User-Guides/Getting-Started/Installation.md)**
     * For a clean and trouble-free installation of the UCP.
 
 * **► [Stronghold Crusader Wiki](Stronghold-Crusader-Wiki/Units/Units-Overview.md)**
