@@ -33,7 +33,7 @@ See the full sidebar structure in `docs/_Sidebar.md`. Note that the custom websi
 
 To embed a page, you need its raw GitHub URL. For example, to fetch and render the `Installation.md` page:
 
-+++js
+```js
 // Example: fetch & render the Installation page
 import { marked } from 'marked';
 
@@ -44,4 +44,4 @@ fetch(url)
   .then(md => {
     document.getElementById('wiki-root').innerHTML = marked.parse(md);
   });
-+++
+```
