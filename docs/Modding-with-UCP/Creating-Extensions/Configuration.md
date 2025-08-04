@@ -1,3 +1,5 @@
+[< Back to Creating Extensions](../Creating-Extensions.md)
+
 # Configuration (`options.yml` & `config.yml`)
 
 The UCP's configuration system allows for incredible flexibility. Module creators can expose options to users, and plugin creators can then combine and configure these modules to create unique gameplay experiences. This system revolves around two key files: `options.yml` and `config.yml`.
