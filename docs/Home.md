@@ -25,7 +25,7 @@ Want to jump in and get the best possible Crusader experience?
 **► [Installation Guide](User-Guides/Getting-Started/Installation.md)**
     * For a clean and trouble-free installation of the UCP.
 
-**► [Stronghold Crusader Wiki](Stronghold-Crusader-Wiki/Units/Units-Overview.md)**
+**► [Stronghold Crusader Wiki](Stronghold-Crusader-Wiki.md)**
     * Deepen your knowledge of units, buildings, and game mechanics to improve your strategies.
 
 ### For Modders
