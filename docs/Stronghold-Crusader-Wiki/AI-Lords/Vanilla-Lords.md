@@ -22,7 +22,7 @@ This section provides a detailed analysis of the 16 original AI Lords included i
 | Portrait | Lord | Playstyle |
 | :---: | :--- | :--- |
 | ![Emperor Frederick](./Vanilla-Lords/images/frederick_portrait.png) | [**Emperor Frederick**](./Vanilla-Lords/Frederick.md) | Emperor with a formidable cavalry and mighty sieges. |
-| ![King Phillip](./Vanilla-Lords/images/phillip_portrait.png) | [**King Philip**](./Vanilla-Lords/Phillip.md) | Aggressive king who attacks early and sends out his chivalric elite. |
+| ![King Phillip](./Vanilla-Lords/images/phillip_portrait.png) | [**King Phillip**](./Vanilla-Lords/Phillip.md) | Aggressive king who attacks early and sends out his chivalric elite. |
 | ![The Sheriff](./Vanilla-Lords/images/sheriff_portrait.png) | [**The Sheriff**](./Vanilla-Lords/Sheriff.md) | Stronger version of The Pig; Uses crossbows and macemen. |
 | ![The Nizar](./Vanilla-Lords/images/nizar_portrait.png) | [**The Nizar**](./Vanilla-Lords/Nizar.md) | The original assassin lord; relies on stealth and large attacks. |
 | ![The Wazir](./Vanilla-Lords/images/wazir_portrait.png) | [**The Wazir**](./Vanilla-Lords/Wazir.md) | Powerful fire-based lord with a strong economy. |
