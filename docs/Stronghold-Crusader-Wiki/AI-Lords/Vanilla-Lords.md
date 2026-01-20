@@ -9,7 +9,7 @@ This section provides a detailed analysis of the 16 original AI Lords included i
 | Portrait | Lord | Playstyle |
 | :---: | :--- | :--- |
 | ![The Rat](./Vanilla-Lords/images/rat_portrait.png) | [**The Rat**](./Vanilla-Lords/Rat.md) | Overwhelming early-game spearman rusher. |
-| ![The Snake](./Vanilla-Lords/images/snake_portrait.png) | [**The Snake**](./Vanilla-Lords/Snake.md) | Early-game harasser using archers and assassins. |
+| ![The Snake](./Vanilla-Lords/images/snake_portrait.png) | [**The Snake**](./Vanilla-Lords/Snake.md) | Early-game harasser using archers, slaves and assassins. |
 | ![The Pig](./Vanilla-Lords/images/pig_portrait.png) | [**The Pig**](./Vanilla-Lords/Pig.md) | Slow-building brute who attacks with macemen & crossbows. |
 | ![The Wolf](./Vanilla-Lords/images/wolf_portrait.png) | [**The Wolf**](./Vanilla-Lords/Wolf.md) | Powerful late-game lord with strong castles and elite troops. |
 | ![Saladin](./Vanilla-Lords/images/saladin_portrait.png) | [**Saladin**](./Vanilla-Lords/Saladin.md) | Well-rounded Arabian lord with a strong economy and swordsmen. |
@@ -21,9 +21,9 @@ This section provides a detailed analysis of the 16 original AI Lords included i
 
 | Portrait | Lord | Playstyle |
 | :---: | :--- | :--- |
-| ![Emperor Frederick](./Vanilla-Lords/images/frederick_portrait.png) | [**Emperor Frederick**](./Vanilla-Lords/Frederick.md) | Knight-focused commander with a formidable cavalry. |
-| ![King Philip](./Vanilla-Lords/images/philip_portrait.png) | [**King Philip**](./Vanilla-Lords/Philip.md) | Aggressive knight commander who mounts early attacks. |
-| ![The Sheriff](./Vanilla-Lords/images/sheriff_portrait.png) | [**The Sheriff**](./Vanilla-Lords/Sheriff.md) | Stronger version of The Pig; uses crossbows and macemen. |
+| ![Emperor Frederick](./Vanilla-Lords/images/frederick_portrait.png) | [**Emperor Frederick**](./Vanilla-Lords/Frederick.md) | Emperor with a formidable cavalry and mighty sieges. |
+| ![King Phillip](./Vanilla-Lords/images/phillip_portrait.png) | [**King Philip**](./Vanilla-Lords/Phillip.md) | Aggressive king who attacks early and sends out his chivalric elite. |
+| ![The Sheriff](./Vanilla-Lords/images/sheriff_portrait.png) | [**The Sheriff**](./Vanilla-Lords/Sheriff.md) | Stronger version of The Pig; Uses crossbows and macemen. |
 | ![The Nizar](./Vanilla-Lords/images/nizar_portrait.png) | [**The Nizar**](./Vanilla-Lords/Nizar.md) | The original assassin lord; relies on stealth and large attacks. |
 | ![The Wazir](./Vanilla-Lords/images/wazir_portrait.png) | [**The Wazir**](./Vanilla-Lords/Wazir.md) | Powerful fire-based lord with a strong economy. |
 | ![The Emir](./Vanilla-Lords/images/emir_portrait.png) | [**The Emir**](./Vanilla-Lords/Emir.md) | Hit-and-run specialist who fields large groups of horse archers. |
