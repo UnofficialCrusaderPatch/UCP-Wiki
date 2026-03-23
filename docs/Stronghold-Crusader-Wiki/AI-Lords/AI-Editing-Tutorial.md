@@ -66,8 +66,8 @@ This file contains metadata about your AI.
 This is the heart of your AI's personality, replacing the old `.aic` files. It contains all the key-value pairs that define the AI's behavior.
 
 For a full list of parameters and what they do, see these essential resources:
-* [AI Character Parameters (AIC)](AI-Character-Parameters)
-* [AI Personality Explained](AI-Personality-Explained)
+* [AI Character Parameters (AIC)](Stronghold-Crusader-Wiki/AI-Lords/AI-Character-Parameters)
+* [AI Personality Explained](Stronghold-Crusader-Wiki/AI-Lords/AI-Personality-Explained)
 
 ```json
 {
