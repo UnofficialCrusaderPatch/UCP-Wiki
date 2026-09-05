@@ -63,7 +63,7 @@ This file contains metadata about your AI.
 ```
 
 ### `character.json` (Required)
-This is the heart of your AI's personality, replacing the old `.aic` files. It contains all the key-value pairs that define the AI's behavior.
+This is the heart of your AI's personality, replacing the old `.aic` files. Its lowercase `aic` object contains the key-value pairs that define the AI's behavior. AIC Loader can also load separate personality files without replacing a character.
 
 For a full list of parameters and what they do, see these essential resources:
 * [AI Character Parameters (AIC)](Stronghold-Crusader-Wiki/AI-Lords/AI-Character-Parameters)
@@ -71,15 +71,16 @@ For a full list of parameters and what they do, see these essential resources:
 
 ```json
 {
-  "AIC": {
+  "aic": {
     "CriticalPopularity": 3000,
     "LowestPopularity": 5000,
     "AttUnitMain1": "Swordsman",
     "AttMaxEngineers": 16
-    // ... all other AIC parameters
   }
 }
 ```
+
+Extra fields require the module that introduces them and its AIC mode to be enabled. See [module-provided AIC fields](AI-Character-Parameters.md#fields-added-by-modules) for the AIV Troop Behaviour and Ox Tethers requirements, values and priority rules. Declare the provider in your AI plugin dependencies when its behavior is required.
 
 ### Portraits (Optional)
 * `portrait.png`: The main portrait of the lord shown in the lobby.
