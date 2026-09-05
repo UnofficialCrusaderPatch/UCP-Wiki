@@ -104,7 +104,7 @@ The fields belong to an **AI personality**, not a player slot. Players using the
 
 **Introduced by:** `aiv-troops-behaviour` 0.2.0 ([feature PR](https://github.com/DanielFleger/ucp3-fixes/pull/2)). These are the named-value fields in the proposed module; the feature is not yet a stable store release. The former narrow `aiv-troop-spot-fix` does not provide them.
 
-**Requirements:** Crusader or Crusader Extreme 1.41, framework >=3.0.4, frontend >=1.0.17, and `aicloader >=1.1.0`. Enable the module, then **Troop settings** and **Use AIC overrides** under **AI → AIV Troop Behaviour**. The position-loading fix alone does not enable the extra behavior fields. AI Swapper is optional.
+**Requirements:** Crusader or Crusader Extreme 1.41, framework >=3.0.4, frontend >=1.0.16, and `aicloader >=1.1.0`. Enable the module, then **Troop settings** and **Use AIC overrides** under **AI → AIV Troop Behaviour**. The position-loading fix alone does not enable the extra behavior fields. AI Swapper is optional.
 
 The two settings are independent:
 
