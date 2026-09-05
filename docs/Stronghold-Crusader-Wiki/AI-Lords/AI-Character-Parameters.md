@@ -111,7 +111,7 @@ The two settings are independent:
 - **InitialRole:** `"defend"` assigns unassigned starting/scenario troops to defense; `"dig"` assigns capable troops to moat digging. This does not replace normal recruitment settings or reassign units already in a group.
 - **Movement:** `"hold"` keeps a defensive group at its assigned AIV slot; `"patrol"` cycles between slots using `DefWallPatrolGroups` and `DefWallPatrolRallyTime`. Holding does not disable combat or special duties. Zero patrol groups means no cycling; absent AIV slots produce no custom slot order.
 
-Omit a field to inherit the next applicable setting. Priority is **troop AIC → common AIC → troop menu choice → All troops → game behavior**, including enabled fixes. There are no public numeric values or explicit native/inherit values. No overrides and untouched menu settings preserve game behavior.
+Omit a field to inherit the next applicable setting. Priority is **troop AIC → common AIC → troop menu choice → game behavior**, including enabled fixes. There are no public numeric values or explicit native/inherit values. No overrides and untouched menu settings preserve game behavior.
 
 The common role accepts only `"defend"`. Select `"dig"` explicitly for Engineers, Crusader archers, Spearmen, Pikemen, Macemen or Slaves. Other troops cannot dig. If a capable unit's live digging flag is disabled, a digging request falls back to defense; digging also needs moat tiles.
 
