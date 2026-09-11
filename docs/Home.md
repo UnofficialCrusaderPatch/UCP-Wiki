@@ -4,6 +4,8 @@ This is the central documentation hub for the [**Unofficial Crusader Patch (UCP)
 
 ## What is the UCP?
 
+See the [changelog](Changelog.md) for recent additions.
+
 The Unofficial Crusader Patch is a modification framework for Stronghold Crusader. It serves multiple purposes:
 * **Fixes** long-standing bugs and improves game stability.
 * **Extends** the game with new features and quality-of-life improvements.
