@@ -24,7 +24,7 @@ During initialization, `ucp.dll` sets up the patching environment and the Lua st
 
 After the framework is initialized, `main.lua` takes over and begins loading the extensions you've enabled in the UCP GUI. Extensions are loaded in a specific order and come in two types: **Modules** and **Plugins**.
 
-For a detailed breakdown of what extensions are and how they're structured, see the [Extensions Overview](Extensions-Overview.md) page.
+For a detailed breakdown of what extensions are and how they're structured, see the [Extensions Overview](../Creating-Extensions.md) page.
 
 ## 4. Handing Control Back to the Game
 

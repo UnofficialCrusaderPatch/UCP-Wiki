@@ -44,7 +44,7 @@ Want to create your own content for Stronghold Crusader?
 
 Want to contribute to the core UCP framework and code new features?
 
-**► [Contributor Tutorial](Developer-Zone/Contributor-Tutorial.md)**
+**► [Contributor Tutorial](Developer-Zone.md)**
     * Your starting point for learning how to create code-altering Modules for the UCP.
 
 **► [Framework Architecture](Modding-with-UCP/Creating-Extensions/Framework-Architecture.md)**

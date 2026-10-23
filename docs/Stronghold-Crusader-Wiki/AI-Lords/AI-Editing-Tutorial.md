@@ -4,11 +4,11 @@ This guide will walk you through the process of creating a custom AI character f
 
 ## Prerequisites
 
-This tutorial assumes you have a basic understanding of how to create a UCP3 Plugin. It is **highly recommended** to use the UCP3 GUI to create a blank plugin template first, rather than creating folders and files manually.
+This tutorial assumes you have created a UCP3 Plugin through the GUI first.
 
-> **TODO:** Create and link to a `Creating-a-Plugin.md` tutorial page. For now, users should refer to the UCP3 GUI's functionality for creating new, empty plugins.
+See [Creating a Plugin](../../Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md). Add `aiSwapper` to your plugin's dependencies.
 
-Once you have your empty plugin, you can begin adding your AI files to it.
+Once you have your plugin, you can begin adding your AI files to it.
 
 ---
 
@@ -18,7 +18,7 @@ An AI character is defined as a collection of resources inside your plugin folde
 
 `ucp/plugins/YourPlugin-1.0.0/resources/ai/<AI_LORD_NAME>/`
 
-* **`<AI_LORD_NAME>`**: This should be the internal name of the AI you are replacing (e.g., `Rat`, `Snake`, `Wolf`, `Saladin`). All files for that AI go inside this folder.
+* **`<AI_LORD_NAME>`**: Use a name for your AI (e.g., `Rat`, `Snake`, `Wolf`, `Saladin`); AI Swapper selects the slot it replaces. All files for that AI go inside this folder.
 
 Here is a complete view of what a fully custom AI folder might contain:
 
@@ -58,7 +58,19 @@ This file contains metadata about your AI.
   "name": "Custom Wolf",
   "version": "1.0.0",
   "author": "YourName",
-  "description": "A new version of the Wolf with a focus on siege."
+  "description": "A new version of the Wolf with a focus on siege.",
+  "defaultLang": "en",
+  "supportedLang": ["en"],
+  "switched": {
+    "binks": false,
+    "speech": false,
+    "aic": true,
+    "aiv": false,
+    "lord": false,
+    "startTroops": false,
+    "lines": false,
+    "portrait": false
+  }
 }
 ```
 
@@ -66,17 +78,16 @@ This file contains metadata about your AI.
 This is the heart of your AI's personality, replacing the old `.aic` files. It contains all the key-value pairs that define the AI's behavior.
 
 For a full list of parameters and what they do, see these essential resources:
-* [AI Character Parameters (AIC)](Stronghold-Crusader-Wiki/AI-Lords/AI-Character-Parameters)
-* [AI Personality Explained](Stronghold-Crusader-Wiki/AI-Lords/AI-Personality-Explained)
+* [AI Character Parameters (AIC)](AI-Character-Parameters.md)
+* [AI Personality Explained](AI-Personality-Explained.md)
 
 ```json
 {
-  "AIC": {
+  "aic": {
     "CriticalPopularity": 3000,
     "LowestPopularity": 5000,
     "AttUnitMain1": "Swordsman",
     "AttMaxEngineers": 16
-    // ... all other AIC parameters
   }
 }
 ```
@@ -88,7 +99,7 @@ For a full list of parameters and what they do, see these essential resources:
 ### `aiv/` Folder (Optional)
 This folder holds the AI's castle designs (`.aiv` files).
 
-* `mapping.json`: This file is crucial. It maps the game's 8 castle slots to your specific `.aiv` filenames. This means you don't have to provide all 8 castles.
+* `mapping.json`: This file is crucial. It maps the game's 8 castle slots to your specific `.aiv` filenames. Unmapped castle slots are disabled.
     ```json
     {
       "castle_1": "Wolf_Castle_1.aiv",

@@ -17,7 +17,7 @@ Please use this template when adding a new unit entry.
 * **Range:** (For ranged units)
 * **Armor Rating:**
 * **Special Abilities:** (e.g., "Can dig moats," "Can light pitch ditches.")
-* **Internal Power Value:** (Reference from the [Unit Power Table](Unit-Power-Table))
+* **Internal Power Value:** (Reference from the [Unit Power Table](Game-Mechanics/Unit-Power-Table.md))
 
 ---
 
