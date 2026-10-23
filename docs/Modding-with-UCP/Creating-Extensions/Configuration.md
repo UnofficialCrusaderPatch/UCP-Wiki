@@ -1,80 +1,102 @@
-[Back to Creating Extensions](../Creating-Extensions.md)
+[< Back to Creating Extensions](../Creating-Extensions.md)
 
-# Configuration with options.yml and config.yml
+# Configuration (`options.yml` & `config.yml`)
 
-An extension's `options.yml` exposes settings in the launcher. A plugin's `config.yml` can suggest or require values for settings supplied by its dependencies. These are different from an AI's `meta.json` and `character.json`, which describe its content.
+The UCP's configuration system allows for incredible flexibility. Module creators can expose options to users, and plugin creators can then combine and configure these modules to create unique gameplay experiences. This system revolves around two key files: `options.yml` and `config.yml`.
 
-## Expose settings in options.yml
+## The URL System
 
-The file has a `meta` object and an `options` array. An option's `url` identifies its place in the configuration. Use the display element names supported by the launcher; for example, a boolean switch uses `UCP2Switch`:
+Every configurable option is identified by a unique "URL" or key. This is a dot-separated string that creates a structured hierarchy, like `moduleName.feature.option`. This ensures that every setting has a unique identifier and keeps configuration files organized.
 
-```yaml
-meta:
-  version: 1.0.0
-options:
-  - name: enable-feature
-    category: [My Module]
-    header: Enable feature
-    text: Enable this module's feature.
-    display: UCP2Switch
-    url: myModule.enable-feature
-    contents:
-      type: boolean
-      value: true
-```
+**Example:** An option for AI wood purchasing might have the URL `AIImprovements.economy.woodPurchaseAmount`.
 
-For translated labels, use placeholders such as `'{{enable-feature}}'` and define their strings in `locale/en.yml`. See [Map Loader's options](https://github.com/UnofficialCrusaderPatch/extension-maploader/blob/main/options.yml) for working switches, and use a current module with the same control type as a reference before introducing sliders or choices.
+---
 
-## Suggest or require values in config.yml
+## `options.yml`: Providing Options to Users
 
-A sparse configuration wraps demands in `config-sparse`. Module settings go under `modules.<module-name>.config`. For the switch above:
+An extension can include an `options.yml` file to define settings that end-users can change in the UCP GUI. Modules should use this to expose their features, allowing for maximum customization.
+
+* **Goal:** Make your module unopinionated. Provide toggles, sliders, and choices to let users tailor the experience.
+* **Defaults:** The default values in `options.yml` should, whenever possible, replicate the vanilla game's behavior.
+
+### Example `options.yml`
+
+This file defines a slider, a switch, and a choice dropdown.
 
 ```yaml
-meta:
-  version: 1.0.0
-config-sparse:
-  modules:
-    myModule:
-      config:
-        enable-feature:
-          contents:
-            suggested-value: true
-  plugins: {}
+# options.yml - An array of UI elements
+- name: Example Slider
+  url: myModule.features.exampleSlider
+  description: "Controls the intensity of the feature."
+  display: slider
+  contents:
+    type: number
+    min: 0
+    max: 100
+    step: 5
+    value: 50 # Default value
+
+- name: Enable Feature
+  url: myModule.features.enableSwitch
+  description: "Toggles the entire feature on or off."
+  display: switch
+  contents:
+    type: boolean
+    value: true # Default value
+
+- name: AI Difficulty
+  url: myModule.behavior.difficulty
+  description: "Select the AI's combat difficulty."
+  display: choice
+  contents:
+    type: choice
+    choices:
+      - name: easy
+        text: "Easy Peasy"
+      - name: normal
+        text: "Normal"
+      - name: hard
+        text: "Nightmare"
+    value: normal # Default value
 ```
 
-A `suggested-value` supplies a value that can be overridden. A `required-value` makes that value a requirement. Numeric constraints can also use `required-min` and `required-max` where the option supports them. The launcher resolves the active extensions' demands and reports conflicts; apply order and the other active configurations matter.
+---
 
-Declare every extension your preset needs in `definition.yml`. Exporting the intended setup through the launcher's **Create plugin** action in Creator mode is a useful starting point. Review the output because it captures the current configuration and dependencies, not just the setting you last changed.
+## `config.yml`: Demanding Configurations
 
-## Apply an AI pack as a preset
+An extension can also include a `config.yml` file to **demand** specific settings from its dependencies. This is how a "total conversion" plugin can ensure all the modules it relies on are configured correctly.
 
-Installing a content pack makes its characters available in AI Swapper. To select a personality automatically, a separate preset can depend on that pack and configure AI Swapper's menu.
+* **Goal:** Create a specific, curated experience. An "Ultimate AI Pack" plugin would use `config.yml` to set the health of units, the aggression of AI, and other parameters from different modules.
 
-For the `My-AI-Pack` example in [Creating a Plugin](Creating-a-Plugin.md), an applied preset's `config.yml` can contain:
+### Required vs. Suggested
+
+To provide flexibility, demands can be either **required** or **suggested**.
+
+* `required-*`: This is a hard requirement. If two active extensions have conflicting `required-` demands for the same option, the UCP will throw an error.
+* `suggested-*`: This acts as a new default value. It can be overridden by other suggestions higher in the load order or by any `required-` demand.
+
+### Example `config.yml`
+
+Imagine a plugin "MyBalancePack" that depends on "myModule" from the example above. It wants to force the slider to be between 80 and 100, and suggests a default value of 90.
 
 ```yaml
-meta:
-  version: 1.0.0
-config-sparse:
-  modules:
-    aiSwapper:
-      config:
-        menu:
-          contents:
-            suggested-value:
-              abbot:
-                - name: My Abbot
-                  root: ucp/plugins/My-AI-Pack/resources/ai/My-Abbot/
-                  control:
-                    aic: true
-  plugins: {}
+# config.yml for MyBalancePack
+# This file specifies demands on other extensions.
+
+modules:
+  myModule: # Name of the module this config applies to
+    features:
+      exampleSlider:
+        contents:
+          required-min: 80
+          required-max: 100
+          suggested-value: 90
+    behavior:
+      difficulty:
+        contents:
+          required-value: "hard" # Force the difficulty to 'hard'
 ```
 
-The `root` uses UCP's version-independent plugin path alias. It must identify the provider directory containing `meta.json`. `control` selects the components this preset applies; the example selects only the personality. Add the other supplied components when building your full preset.
+## The Final Configuration
 
-The preset needs dependencies on `My-AI-Pack` and `aiSwapper`, as well as the compatible framework and frontend. Use [Aggressive AI Behaviour Applied](https://github.com/Krarilotus/extension-Aggressive-AI-Behaviour-Applied) for a complete working definition and configuration. Test the resolved configuration in the launcher and verify the selected components in a match.
-
-## Related guides
-
-- [AI Editing Tutorial](../../Stronghold-Crusader-Wiki/AI-Lords/AI-Editing-Tutorial.md): build the character resources.
-- [Extension File Reference](Extension-File-Reference.md): files used by a plugin.
+The UCP backend processes the `options.yml` from all modules and then applies the `config.yml` demands from all active extensions in their specified load order. This resolves all requirements and suggestions into a single, final configuration that is passed to the game. The GUI is responsible for detecting and reporting any conflicts to the user before they launch the game.

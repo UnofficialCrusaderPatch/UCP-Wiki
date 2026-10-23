@@ -25,7 +25,7 @@
 | Developer Zone | [`docs/Developer-Zone.md`](docs/Developer-Zone.md) |
 | Project Roadmap | [`docs/Project.md`](docs/Project.md) |
 
-The website generates the sidebar automatically from the Markdown files under `docs/`. Keep page links relative to the source file, including the `.md` extension, so they also work on GitHub.
+The custom website generates the sidebar automatically from the file structure.
 
 ---
 
