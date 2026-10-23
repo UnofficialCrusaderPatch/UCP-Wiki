@@ -4,11 +4,11 @@ This guide will walk you through the process of creating a custom AI character f
 
 ## Prerequisites
 
-This tutorial assumes you have a basic understanding of how to create a UCP3 Plugin. It is **highly recommended** to use the UCP3 GUI to create a blank plugin template first, rather than creating folders and files manually.
+This tutorial assumes you have created a UCP3 Plugin through the GUI first.
 
 See [Creating a Plugin](../../Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md). Add `aiSwapper` to your plugin's dependencies.
 
-Once you have your empty plugin, you can begin adding your AI files to it.
+Once you have your plugin, you can begin adding your AI files to it.
 
 ---
 

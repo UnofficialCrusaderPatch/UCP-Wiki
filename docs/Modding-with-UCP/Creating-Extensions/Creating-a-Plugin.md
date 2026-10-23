@@ -4,17 +4,13 @@ Plugins are the primary way to add new content to Stronghold Crusader with UCP. 
 
 ## Step 1: Use the GUI to Create a Template
 
-**Do not create plugin folders manually.** This can lead to errors. The UCP GUI has a built-in tool to create a perfectly structured empty plugin for you.
+1.  Activate the extensions you need under **Content** and set their options under **Customisations**.
+2.  In **Customisations**, click the palette icon at the bottom right to enable **Creator mode**.
+3.  Click **Create new plugin** at the bottom left.
+4.  Enter a **Plugin name** using letters, numbers and hyphens (e.g., `My-Awesome-Map-Pack`), your **Plugin author** name, and a **Plugin version** (e.g., `1.0.0`).
+5.  Click **Create**, then **Ok** when asked to reload.
 
-> **TODO:** Add a screenshot of the "Create New Plugin" button in the GUI's Content tab.
-
-1.  Navigate to the **Content** tab in the UCP GUI.
-2.  Click the "Create New Plugin" button.
-3.  Fill in the details:
-    * **Name:** A human-readable name for your plugin (e.g., "My Awesome Map Pack").
-    * **Version:** Start with `1.0.0`.
-    * **Author:** Your name.
-4.  Click "Create". The GUI will generate a new folder in `ucp/plugins/` with the correct structure, including a `definition.yml` file.
+The GUI saves your current configuration and dependencies as `config.yml` and `definition.yml` in `ucp/plugins/<Name>-<Version>/`. Add your custom content to that folder next.
 
 ## Step 2: Understand the `definition.yml`
 
@@ -39,7 +35,7 @@ dependencies:
 
 ## Step 3: Add Your Content to the `resources` Folder
 
-All game content (maps, AI, etc.) must go inside the `resources` subfolder of your plugin. The UCP framework uses this folder to virtually overlay your files onto the game.
+Create a `resources` subfolder for your content. Include and configure the loaders your plugin needs.
 
 * **For Custom Maps:** Place your `.map` files in `resources/maps/`.
 * **For Custom AI:** Follow the structure outlined in the [AI Editing Tutorial](../../Stronghold-Crusader-Wiki/AI-Lords/AI-Editing-Tutorial.md). Place your AI folders in `resources/ai/`.
@@ -50,4 +46,4 @@ If you want users to be able to configure your plugin, you can create an `option
 
 ## Step 5: Activate and Test
 
-Go back to the UCP GUI's **Content** tab. Your new plugin will appear in the "Inactive Extensions" list. Drag it to the "Active Extensions" list, launch the game, and test if your new content appears correctly.
+After adding your files, click **Reload** in the GUI. Under **Content**, find your plugin in **Available extensions**, click its right-pointing arrow to move it to **Activated extensions**, then click **Apply**. Launch the game and test if your new content appears correctly.
