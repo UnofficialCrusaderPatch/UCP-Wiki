@@ -26,11 +26,11 @@ display-name: "My Awesome Map Pack"
 version: "1.0.0"
 author: "YourName"
 description: "A collection of symmetrical maps for multiplayer."
-# If your plugin relies on another extension (e.g., the AI Swapper),
-# you would list it as a dependency here.
 type: plugin
 meta:
   version: 1.0.0
+# If your plugin relies on another extension (e.g., the AI Swapper),
+# you would list it as a dependency here.
 dependencies:
   aiSwapper: ^1.1.0
   framework: ^3.0.0
