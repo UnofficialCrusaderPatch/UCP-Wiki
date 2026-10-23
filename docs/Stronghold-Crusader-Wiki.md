@@ -18,5 +18,5 @@ Welcome to the Stronghold Crusader knowledge base! This section of the UCP Wiki 
 * **[Game Mechanics](./Stronghold-Crusader-Wiki/Game-Mechanics.md)**
     * Explore the underlying systems that make the game tick, such as the popularity system, combat formulas, and internal data references.
 
-* **[Strategies](./Stronghold-Crusader-Wiki/Strategies/Strategies-Overview.md)**
+* **[Strategies](./Stronghold-Crusader-Wiki/Strategies.md)**
     * A collection of tried-and-true strategies, from the classic Maceman Rush to advanced economic builds for both singleplayer and multiplayer.

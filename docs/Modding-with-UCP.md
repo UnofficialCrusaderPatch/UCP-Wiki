@@ -2,7 +2,7 @@
 
 This is the central hub for anyone who wants to create their own content for Stronghold Crusader using the Unofficial Crusader Patch. The UCP is designed to be a powerful and flexible modding framework, allowing you to create anything from a single custom map to a total conversion that changes every aspect of the game.
 
-Modding is distinct from the **[Developer Zone](../Developer-Zone.md)**, which focuses on contributing to the core UCP framework itself. Here, we focus on using the framework to modify the game.
+Modding is distinct from the **[Developer Zone](Developer-Zone.md)**, which focuses on contributing to the core UCP framework itself. Here, we focus on using the framework to modify the game.
 
 All custom content is packaged as an **Extension**. There are two types:
 * **Plugins:** For adding content like maps, AIs, and graphics.

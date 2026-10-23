@@ -23,7 +23,7 @@ Modules are powerful extensions that can **modify game code**.
 Here are the guides to help you build your own extension.
 
 * **[Creating a Plugin](./Creating-Extensions/Creating-a-Plugin.md)**
-    * The best place to start. A step-by-step tutorial showing you how to use the UCP GUI to generate a clean plugin template and add your content.
+    * The best place to start. A step-by-step tutorial covering plugin definitions, content folders, configuration presets and testing.
 
 * **[Configuration (`options.yml` & `config.yml`)](./Creating-Extensions/Configuration.md)**
     * Learn how to make your mod customizable by adding user-facing options (like switches and sliders) to the UCP GUI.

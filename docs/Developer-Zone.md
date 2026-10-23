@@ -1,4 +1,4 @@
-[< Back to Home](../Home.md)
+[< Back to Home](Home.md)
 
 # Contributor Tutorial: Creating a Module
 

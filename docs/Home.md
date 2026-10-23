@@ -35,7 +35,7 @@ Want to jump in and get the best possible Crusader experience?
 Want to create your own content for Stronghold Crusader?
 
 **► [Creating Your First Plugin](Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md)**
-    * The essential guide showing you how to use the UCP GUI to create your own content plugin for maps, AIs, and more.
+    * The guide to packaging content, defining dependencies and testing a plugin in the launcher.
 
 **► [AI Editing Tutorial](Stronghold-Crusader-Wiki/AI-Lords/AI-Editing-Tutorial.md)**
     * A deep dive into creating and customizing AI lords, the heart of many mods.
@@ -44,7 +44,7 @@ Want to create your own content for Stronghold Crusader?
 
 Want to contribute to the core UCP framework and code new features?
 
-**► [Contributor Tutorial](Developer-Zone/Contributor-Tutorial.md)**
+**► [Contributor Tutorial](Developer-Zone.md)**
     * Your starting point for learning how to create code-altering Modules for the UCP.
 
 **► [Framework Architecture](Modding-with-UCP/Creating-Extensions/Framework-Architecture.md)**

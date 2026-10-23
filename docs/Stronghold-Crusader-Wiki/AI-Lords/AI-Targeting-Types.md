@@ -17,5 +17,5 @@ When an AI is set to `Balanced`, it calculates a weight for every other enemy pl
 The formula is:
 `weight = (target's gold / 100) + (power of target's army) + (target's available peasants) + (2 * distance_to_target)`
 
-* **Power of Target's Army:** This is the sum of the power values of all the target's units. See the [Unit Power Table](Unit-Power-Table) for these values.
+* **Power of Target's Army:** This is the sum of the power values of all the target's units. See the [Unit Power Table](../Game-Mechanics/Unit-Power-Table.md) for these values.
 * **Distance to Target:** This is the map distance between the AI's keep and the target's keep.

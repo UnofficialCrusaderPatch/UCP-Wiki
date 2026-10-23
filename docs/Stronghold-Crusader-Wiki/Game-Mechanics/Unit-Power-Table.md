@@ -2,7 +2,7 @@
 
 Stronghold Crusader assigns an internal "power" value to each unit. This value is a crucial component in several AI decision-making processes, including:
 
-* **Calculating Army Strength:** When an AI with the `Balanced` [Targeting Type](AI-Targeting-Types) decides who to attack, it calculates the total power of each potential target's army.
+* **Calculating Army Strength:** When an AI with the `Balanced` [Targeting Type](../AI-Lords/AI-Targeting-Types.md) decides who to attack, it calculates the total power of each potential target's army.
 * **"Greatest Lord" Score:** The power of a player's army contributes to their overall score, which can influence AI behavior.
 
 Below is the table of these internal power values. Note that siege engines have a base power plus an additional value for each engineer manning them.

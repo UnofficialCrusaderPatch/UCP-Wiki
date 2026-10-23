@@ -19,13 +19,13 @@
 | Section | Page |
 |---|---|
 | Getting Started | [`docs/User-Guides/Getting-Started/Recommended-Setups.md`](docs/User-Guides/Getting-Started/Recommended-Setups.md) |
-| Crusader Wiki | [`docs/Stronghold-Crusader-Wiki/Units/Units-Overview.md`](docs/Stronghold-Crusader-Wiki/Units/Units-Overview.md) |
-| AI Lords Guide | [`docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview.md`](docs/Stronghold-Crusader-Wiki/AI-Lords/AI-Lords-Overview.md) |
+| Crusader Wiki | [`docs/Stronghold-Crusader-Wiki/Units.md`](docs/Stronghold-Crusader-Wiki/Units.md) |
+| AI Lords Guide | [`docs/Stronghold-Crusader-Wiki/AI-Lords.md`](docs/Stronghold-Crusader-Wiki/AI-Lords.md) |
 | Create a Mod | [`docs/Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md`](docs/Modding-with-UCP/Creating-Extensions/Creating-a-Plugin.md) |
-| Developer Zone | [`docs/Developer-Zone/Contributor-Tutorial.md`](docs/Developer-Zone/Contributor-Tutorial.md) |
-| Project Roadmap | [`docs/Project/Roadmap-Ideas.md`](docs/Project/Roadmap-Ideas.md) |
+| Developer Zone | [`docs/Developer-Zone.md`](docs/Developer-Zone.md) |
+| Project Roadmap | [`docs/Project.md`](docs/Project.md) |
 
-See the full sidebar structure in `docs/_Sidebar.md`. Note that the custom website will generate this sidebar automatically from the file structure.
+The website generates the sidebar automatically from the Markdown files under `docs/`. Keep page links relative to the source file, including the `.md` extension, so they also work on GitHub.
 
 ---
 
