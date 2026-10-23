@@ -10,6 +10,10 @@ Plugins are the primary way to add new content to Stronghold Crusader with UCP. 
 4.  Enter a **Plugin name** using letters, numbers and hyphens (e.g., `My-Awesome-Map-Pack`), your **Plugin author** name, and a **Plugin version** (e.g., `1.0.0`).
 5.  Click **Create**, then **Ok** when asked to reload.
 
+![Creator mode with the Create new plugin button in Customisations](images/plugin-creator-mode.png)
+
+![Plugin name, author and version entered in the Create new plugin dialog](images/create-plugin-dialog.png)
+
 The GUI saves your current configuration and dependencies as `config.yml` and `definition.yml` in `ucp/plugins/<Name>-<Version>/`. Add your custom content to that folder next.
 
 ## Step 2: Understand the `definition.yml`
