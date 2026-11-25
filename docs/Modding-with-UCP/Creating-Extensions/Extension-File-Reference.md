@@ -19,7 +19,8 @@ This page provides a detailed breakdown of the common file structure used by all
 
 * `/init.lua` (Optional)
     * The entry point for any scripted logic. If present, it must return a table with `enable` and `disable` functions. The `enable` function is called when the framework starts up.
-    * +++lua
+
+    ```lua
     return {
       enable = function(self, config)
         -- Your setup code goes here
@@ -28,4 +29,4 @@ This page provides a detailed breakdown of the common file structure used by all
         -- Your cleanup code goes here
       end,
     }
-    +++
+    ```

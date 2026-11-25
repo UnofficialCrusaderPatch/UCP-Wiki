@@ -10,7 +10,7 @@ These strategies are primarily designed for competitive multiplayer matches.
 
 | Strategy | Type | Description |
 | :--- | :--- | :--- |
-| [Maceman Rush](Maceman-Rush) | Early Game Aggression | A classic strategy focused on quickly building a force of cheap, effective macemen to overwhelm an opponent before they can establish strong defenses. |
+| [Maceman Rush](Strategies/Maceman-Rush.md) | Early Game Aggression | A classic strategy focused on quickly building a force of cheap, effective macemen to overwhelm an opponent before they can establish strong defenses. |
 | ... | ... | ... |
 
 ## Singleplayer (SP) / vs. AI Strategies

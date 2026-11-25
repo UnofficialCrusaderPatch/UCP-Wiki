@@ -91,9 +91,9 @@ The roadmap is structured by importance, with key strategic initiatives detailed
 
 For other major categories, please see the dedicated pages containing comprehensive lists of ideas.
 
-* **[AIV-Editor Improvements](./Project/AIV-Editor-Improvements.md)** - Quality-of-life fixes and new features for the classic AI castle editor.
+* **[AIV-Editor Improvements](<./Project/Projectlist_deprecated (full list!).md#aiv-editor-improvements>)** - Quality-of-life fixes and new features for the classic AI castle editor.
 * **[AI Improvements](./Project/AI-Improvements.md)** - Fixing long-standing AI issues and adding more depth and customization to AI behavior.
-* **[General Gameplay Improvements](./Project/General-Gameplay-Improvements.md)** - A massive list of ideas for new features, balance changes, and bug fixes to core gameplay mechanics.
+* **[General Gameplay Improvements](./Project/General-Gameplay.md)** - A massive list of ideas for new features, balance changes, and bug fixes to core gameplay mechanics.
 * **[Map Editor Improvements](./Project/Map-Editor-Improvements.md)** - Integrating community tools and adding new features to make map creation easier and more powerful.
 * **[Multiplayer Improvements](./Project/Multiplayer-Improvements.md)** - A focus on stability, new game modes, and quality-of-life features for online play.
 

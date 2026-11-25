@@ -11,7 +11,7 @@ The UCP framework extends Stronghold Crusader's built-in command-line options wi
     * Forces the console to be hidden. This is useful if you are running a Developer build, where the console appears by default.
 
 * `--ucp-verbosity <level>`
-    * Sets the logging verbosity for the UCP log file (`ucp_log.txt`).
+    * Sets the logging verbosity for the UCP log file (`ucp3.log`).
     * **Levels:**
         * `0`: Info (default)
         * `1`: Debug
