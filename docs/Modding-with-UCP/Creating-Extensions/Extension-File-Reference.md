@@ -17,14 +17,16 @@ This page provides a detailed breakdown of the common file structure used by all
 * `/locale/description-en.md` (Optional)
     * A Markdown file containing a rich description of your extension, displayed when a user selects it in the GUI.
 
-* `/init.lua` (Required for modules; optional for content-only plugins)
-    * The entry point for scripted logic. Return a table with `enable` (called at startup) and `disable` (by convention; the framework does not call it).
+* `/init.lua` (Required for modules)
+    * The entry point for any scripted logic. If present, it must return a table with `enable` and `disable` functions. The `enable` function is called when the framework starts up.
 
     ```lua
     return {
       enable = function(self, config)
         -- Your setup code goes here
       end,
-      disable = function(self, config) end,
+      disable = function(self, config)
+        -- Not called by the framework
+      end,
     }
     ```

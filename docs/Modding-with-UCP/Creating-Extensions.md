@@ -14,7 +14,7 @@ Plugins are extensions that primarily add or modify **game content**.
 Modules are powerful extensions that can **modify game code**.
 * **Permissions:** Modules have special permissions to directly patch the game's executable memory using the Runtime Patching System. They have access to core framework functions for creating hooks and detours.
 * **Custom Code:** Modules can include compiled DLL files (`.dll`) for high-performance code. The `init.lua` script is responsible for loading the DLL and linking its functions to the game via the Lua state.
-* **Security:** Secure builds load module ZIPs that match a hash in the security catalog or pass verification with an adjacent `.sig` file. Use a Developer Build to test an unpacked module.
+* **Security:** Because they can execute arbitrary code, modules must be cryptographically signed. The framework will only load modules that are trusted. For development, you can use the Developer Build of UCP to bypass this signature check.
 * **Format:** Modules are distributed as zipped archives (e.g., `ucp/modules/MyGameplayMod-0.0.1.zip`).
 
 ---
@@ -29,7 +29,7 @@ Here are the guides to help you build your own extension.
     * Learn how to make your mod customizable by adding user-facing options (like switches and sliders) to the UCP GUI.
 
 * **[Extension File Reference](./Creating-Extensions/Extension-File-Reference.md)**
-    * **For reference.** A detailed breakdown of the required (`definition.yml`) and optional (`options.yml`, `config.yml`, `locale/`, etc.) files in an extension.
+    * **For reference.** A detailed breakdown of every optional file (`definition.yml`, `locale/`, etc.) that can be included in an extension.
 
 * **[Framework Architecture](./Creating-Extensions/Framework-Architecture.md)**
     * For a deeper technical understanding of how the UCP injects itself into the game and manages the loading of all your custom extensions.
