@@ -8,7 +8,7 @@ When you run `Stronghold Crusader.exe`, the game process loads all of its requir
 
 The UCP replaces the original `binkw32.dll` with its own version. This custom DLL acts as a loader:
 1.  **Injects Code:** It first injects the core UCP code (`ucp.dll`) into the game's main process.
-2.  **Loads Original DLL:** It then renames the original game DLL to `binkw32_real.dll` and loads it, passing through all legitimate game calls to it. This ensures that in-game videos still work correctly.
+2.  **Loads Original DLL:** It then loads the original game DLL, which the installer kept as `binkw32_real.dll`, passing through all legitimate game calls to it. This ensures that in-game videos still work correctly.
 
 The injected code from `ucp.dll` runs *before* the main game code, allowing the framework to initialize itself.
 

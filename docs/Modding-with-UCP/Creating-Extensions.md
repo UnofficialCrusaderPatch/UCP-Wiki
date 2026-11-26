@@ -33,3 +33,12 @@ Here are the guides to help you build your own extension.
 
 * **[Framework Architecture](./Creating-Extensions/Framework-Architecture.md)**
     * For a deeper technical understanding of how the UCP injects itself into the game and manages the loading of all your custom extensions.
+
+---
+## Use what already exists
+
+Before writing custom hooks or loaders, check the [UCP3 API map](https://github.com/UnofficialCrusaderPatch/ucp-agent-guide/blob/main/docs/where-to-find.md) and [common mistakes](https://github.com/UnofficialCrusaderPatch/ucp-agent-guide/blob/main/docs/mistakes.md). Reuse the framework and the modules that own common subsystems:
+
+* **Text and files:** `textResourceModifier` ([`ucp_textResourceModifier`](https://github.com/UnofficialCrusaderPatch/ucp_textResourceModifier), native text and encoding) and `files` ([`extension-files`](https://github.com/UnofficialCrusaderPatch/extension-files), file overrides and extra map directories).
+* **Menus and graphics:** `ui` ([`ucp-extension-ui`](https://github.com/gynt/ucp-extension-ui), menu registration and switching) and `gmResourceModifier` ([`ucp_gmResourceModifier`](https://github.com/UnofficialCrusaderPatch/ucp_gmResourceModifier), GM1 graphics resources).
+* **AI values and save data:** `aicloader` ([`extension-aicloader`](https://github.com/UnofficialCrusaderPatch/extension-aicloader), AIC personality fields) and `map-extensions` ([`ucp-extension-map-extensions`](https://github.com/gynt/ucp-extension-map-extensions), custom save sections).

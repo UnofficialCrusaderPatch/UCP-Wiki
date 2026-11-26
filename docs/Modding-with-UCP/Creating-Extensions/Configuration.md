@@ -24,40 +24,43 @@ An extension can include an `options.yml` file to define settings that end-users
 This file defines a slider, a switch, and a choice dropdown.
 
 ```yaml
-# options.yml - An array of UI elements
-- name: Example Slider
-  url: myModule.features.exampleSlider
-  description: "Controls the intensity of the feature."
-  display: slider
-  contents:
-    type: number
-    min: 0
-    max: 100
-    step: 5
-    value: 50 # Default value
+# options.yml
+meta:
+  version: 1.0.0
+options:
+  - url: myModule.features.exampleSlider
+    text: "Example Slider"
+    tooltip: "Controls the intensity of the feature."
+    display: Slider
+    contents:
+      type: number
+      min: 0
+      max: 100
+      step: 5
+      value: 50 # Default value
 
-- name: Enable Feature
-  url: myModule.features.enableSwitch
-  description: "Toggles the entire feature on or off."
-  display: switch
-  contents:
-    type: boolean
-    value: true # Default value
+  - url: myModule.features.enableSwitch
+    text: "Enable Feature"
+    tooltip: "Toggles the entire feature on or off."
+    display: Switch
+    contents:
+      type: boolean
+      value: true # Default value
 
-- name: AI Difficulty
-  url: myModule.behavior.difficulty
-  description: "Select the AI's combat difficulty."
-  display: choice
-  contents:
-    type: choice
-    choices:
-      - name: easy
-        text: "Easy Peasy"
-      - name: normal
-        text: "Normal"
-      - name: hard
-        text: "Nightmare"
-    value: normal # Default value
+  - url: myModule.behavior.difficulty
+    text: "AI Difficulty"
+    tooltip: "Select the AI's combat difficulty."
+    display: Choice
+    contents:
+      type: choice
+      choices:
+        - name: easy
+          text: "Easy Peasy"
+        - name: normal
+          text: "Normal"
+        - name: hard
+          text: "Nightmare"
+      value: normal # Default value
 ```
 
 ---
@@ -72,29 +75,30 @@ An extension can also include a `config.yml` file to **demand** specific setting
 
 To provide flexibility, demands can be either **required** or **suggested**.
 
-* `required-*`: This is a hard requirement. If two active extensions have conflicting `required-` demands for the same option, the UCP will throw an error.
-* `suggested-*`: This acts as a new default value. It can be overridden by other suggestions higher in the load order or by any `required-` demand.
+* `required-value`: This is a hard requirement. If two active extensions have conflicting `required-value` demands for the same option, the GUI reports a conflict.
+* `suggested-value`: This acts as a new default value. It can be overridden by other suggestions higher in the load order or by any `required-` demand.
 
 ### Example `config.yml`
 
-Imagine a plugin "MyBalancePack" that depends on "myModule" from the example above. It wants to force the slider to be between 80 and 100, and suggests a default value of 90.
+Imagine a plugin "MyBalancePack" that depends on "myModule" from the example above. It suggests a default value of 90 for the slider and forces the difficulty to `hard`.
 
 ```yaml
 # config.yml for MyBalancePack
 # This file specifies demands on other extensions.
-
-modules:
-  myModule: # Name of the module this config applies to
-    features:
-      exampleSlider:
-        contents:
-          required-min: 80
-          required-max: 100
-          suggested-value: 90
-    behavior:
-      difficulty:
-        contents:
-          required-value: "hard" # Force the difficulty to 'hard'
+meta:
+  version: 1.0.0
+config-sparse:
+  modules:
+    myModule: # Name of the module this config applies to
+      config:
+        features:
+          exampleSlider:
+            contents:
+              suggested-value: 90
+        behavior:
+          difficulty:
+            contents:
+              required-value: "hard" # Force the difficulty to 'hard'
 ```
 
 ## The Final Configuration
