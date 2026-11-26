@@ -6,11 +6,9 @@ The UCP framework modifies Stronghold Crusader by intercepting the game's launch
 
 When you run `Stronghold Crusader.exe`, the game process loads all of its required Dynamic Link Libraries (DLLs) into memory. One of these is `binkw32.dll`, used for playing Bink video files.
 
-The UCP replaces the original `binkw32.dll` with its own version. This custom DLL acts as a loader:
-1.  **Injects Code:** It first injects the core UCP code (`ucp.dll`) into the game's main process.
-2.  **Loads Original DLL:** It then renames the original game DLL to `binkw32_real.dll` and loads it, passing through all legitimate game calls to it. This ensures that in-game videos still work correctly.
-
-The injected code from `ucp.dll` runs *before* the main game code, allowing the framework to initialize itself.
+During installation, UCP backs up the original `binkw32.dll` as `binkw32_real.dll` and places its own `binkw32.dll` wrapper in the game directory. At launch, this wrapper acts as a loader:
+1. **Starts UCP:** The wrapper runs `ucp.dll` initialization before calling the original game entry function.
+2. **Forwards video calls:** The wrapper loads `binkw32_real.dll` on the first Bink call and forwards calls to it.
 
 ## 2. Initializing the Framework
 

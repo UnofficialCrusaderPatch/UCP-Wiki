@@ -21,43 +21,42 @@ An extension can include an `options.yml` file to define settings that end-users
 
 ### Example `options.yml`
 
-This file defines a slider, a switch, and a choice dropdown.
+This file defines a number field, a switch, and a choice dropdown.
 
 ```yaml
-# options.yml - An array of UI elements
-- name: Example Slider
-  url: myModule.features.exampleSlider
-  description: "Controls the intensity of the feature."
-  display: slider
-  contents:
-    type: number
-    min: 0
-    max: 100
-    step: 5
-    value: 50 # Default value
+# options.yml
+meta:
+  version: 1.0.0
+options:
+  - url: myModule.features.exampleAmount
+    display: Number
+    text: "Amount"
+    contents:
+      type: number
+      min: 0
+      max: 100
+      value: 50 # Default value
 
-- name: Enable Feature
-  url: myModule.features.enableSwitch
-  description: "Toggles the entire feature on or off."
-  display: switch
-  contents:
-    type: boolean
-    value: true # Default value
+  - url: myModule.features.enableSwitch
+    display: Switch
+    text: "Enable Feature"
+    contents:
+      type: boolean
+      value: false # Default value
 
-- name: AI Difficulty
-  url: myModule.behavior.difficulty
-  description: "Select the AI's combat difficulty."
-  display: choice
-  contents:
-    type: choice
-    choices:
-      - name: easy
-        text: "Easy Peasy"
-      - name: normal
-        text: "Normal"
-      - name: hard
-        text: "Nightmare"
-    value: normal # Default value
+  - url: myModule.behavior.difficulty
+    display: Choice
+    text: "AI Difficulty"
+    contents:
+      type: choice
+      choices:
+        - name: easy
+          text: "Easy Peasy"
+        - name: normal
+          text: "Normal"
+        - name: hard
+          text: "Nightmare"
+      value: normal # Default value
 ```
 
 ---
@@ -72,31 +71,34 @@ An extension can also include a `config.yml` file to **demand** specific setting
 
 To provide flexibility, demands can be either **required** or **suggested**.
 
-* `required-*`: This is a hard requirement. If two active extensions have conflicting `required-` demands for the same option, the UCP will throw an error.
-* `suggested-*`: This acts as a new default value. It can be overridden by other suggestions higher in the load order or by any `required-` demand.
+* `required-value`: Locks the option to a fixed value (including `false`) after user preferences are applied. If two active extensions set conflicting `required-value` locks on the same option, the GUI reports a conflict.
+* `suggested-value`: Sets a new default value that the user can still override unless a `required-value` lock applies.
+* Set a number field's `min` and `max` in the `options.yml` that defines the field; another extension's `config.yml` cannot change them.
 
 ### Example `config.yml`
 
-Imagine a plugin "MyBalancePack" that depends on "myModule" from the example above. It wants to force the slider to be between 80 and 100, and suggests a default value of 90.
+Imagine a plugin "MyBalancePack" that depends on "myModule" from the example above. It suggests an amount of 90 and locks the difficulty to `"hard"`.
 
 ```yaml
 # config.yml for MyBalancePack
 # This file specifies demands on other extensions.
-
-modules:
-  myModule: # Name of the module this config applies to
-    features:
-      exampleSlider:
-        contents:
-          required-min: 80
-          required-max: 100
-          suggested-value: 90
-    behavior:
-      difficulty:
-        contents:
-          required-value: "hard" # Force the difficulty to 'hard'
+meta:
+  version: 1.0.0
+config-sparse:
+  modules:
+    myModule: # Name of the module this config applies to
+      config:
+        features:
+          exampleAmount:
+            contents:
+              suggested-value: 90
+        behavior:
+          difficulty:
+            contents:
+              required-value: "hard" # Lock the difficulty to 'hard'
+  plugins: {}
 ```
 
 ## The Final Configuration
 
-The UCP backend processes the `options.yml` from all modules and then applies the `config.yml` demands from all active extensions in their specified load order. This resolves all requirements and suggestions into a single, final configuration that is passed to the game. The GUI is responsible for detecting and reporting any conflicts to the user before they launch the game.
+The UCP launcher resolves `options.yml` defaults, user preferences, and `config.yml` demands from all active extensions, reports any conflicts before launch, and writes the resulting `config-full`. At game launch, the framework reads `config-full` and passes each extension its settings.
